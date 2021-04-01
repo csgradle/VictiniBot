@@ -17,6 +17,9 @@ function readyDiscord() {
 const commandHandler = require("./commands");
 client.on('message', commandHandler.respond);
 
+let servers = {};
+
 module.exports = {
-    client: client
+    client: client,
+    servers
 }
