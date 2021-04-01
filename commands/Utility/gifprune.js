@@ -21,7 +21,7 @@ module.exports = {
             if(deleted == 0) {
                 msg.channel.send('couldn\'t find any gifs to delete!');
             } else {
-                msg.channel.send(deleted + ' messages deleted.');
+                msg.channel.send(deleted + ' messages deleted.').then(sentMessage => sentMessage.delete({ timeout:5000 }));
             }
         } else {
             const delCount = +args[0];
