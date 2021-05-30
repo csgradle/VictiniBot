@@ -9,7 +9,7 @@ function play(connection, msg) {
     } catch(error) {
         msg.channel.send('error. couldn\'t play song.');
         if(msg.author.id == '326532809948659713') {
-            msg.channel.send(error);
+            console.log(error);
         }
         return;
     }
